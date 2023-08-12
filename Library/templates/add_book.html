@@ -1,0 +1,41 @@
+{%extends 'admin_navbar.html'%}
+{%load static%}
+{%load crispy_forms_tags%}
+{%block title%} LIBRARY MANAGEMENT SYSTEM{%endblock%}
+
+{%block content%}
+
+<div class="container w-50 p-3 text-center my-3 bg-info">
+
+    <form action="" method="POST">{%csrf_token%}
+
+        {{ b|crispy }}
+
+        <input type="submit" value="ADD BOOK" class="btn btn-primary mb-4">
+
+   
+
+    </form>
+    <div>
+        {%  for message in messages %}
+        <h5 class="text-light">{{message}}</h5>
+
+        {% endfor %}
+    </div>
+   
+
+</div>
+
+{%endblock%}
+
+
+
+
+
+
+
+
+
+
+
+
